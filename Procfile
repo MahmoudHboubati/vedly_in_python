@@ -1,0 +1,1 @@
+web: gunicorn vidly_in_python.wsgi
