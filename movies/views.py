@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
-# Create your views here.
+from .models import Movie
 
 
 def index(request):
-    return HttpResponse("Hi Mahmoud" * 1000)
+    movies = Movie.objects.all()
+    return render(request, 'index.html', {'movies': movies})
